@@ -119,6 +119,13 @@
       margin: 0 auto;
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 28px;
+      align-items: start;
+    }
+
     .hero-copy {
       color: #ffffff;
       text-shadow: 0 3px 18px rgba(0, 0, 0, 0.42);
@@ -205,7 +212,7 @@
     }
 
     .hero-panel {
-      margin-top: 20px;
+      margin-top: 10px;
       background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.55);
       box-shadow: var(--shadow);
@@ -411,11 +418,11 @@
       text-align: center;
     }
 
-.footer-credit {
-  margin-top: 4px;
-  font-size: 0.8rem;
-  color: #8a98a6;
-}
+    .footer-credit {
+      margin-top: 4px;
+      font-size: 0.8rem;
+      color: #8a98a6;
+    }
 
     body.phone .nav-wrap {
       align-items: flex-start;
@@ -435,6 +442,16 @@
       .company-image-wrap {
         max-width: 280px;
         justify-self: start;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        margin-top: 16px;
       }
     }
 
@@ -509,16 +526,23 @@
 
   <div class="hero" id="top">
     <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="eyebrow">Local guide • Visa support • Nauru</div>
-        <h1>Meaningful travel in one of the world’s least-visited countries</h1>
-        <p class="hero-subtitle">Local guiding, visa support, and practical help for visitors who want more than a quick stop.</p>
-        <p class="lead-strong">My name is Cindrea, and I’m a proud Nauruan who has lived here my whole life.</p>
-        <p class="lead-strong nauruan">Iouge eouge Naoero.</p>
-        <p>If you are considering Nauru, you are already choosing something uncommon.</p>
-        <p>Some visitors come as part of a journey to see every country in the world. Others come because they want to experience a part of the Pacific few people ever reach. I work with both kinds of travelers, and I help make your time here meaningful.</p>
-        <p>Nauru is not a typical tourism destination. Travel here requires planning, flexibility, and local coordination. Information can be limited, and logistics can change. My role is to introduce you to my island and help make your visit both efficient and enjoyable.</p>
-        <p>I provide local knowledge, coordination, and access.</p>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Local guide • Visa support • Nauru</div>
+          <h1>Meaningful travel in one of the world’s least-visited countries</h1>
+          <p class="hero-subtitle">Local guiding, visa support, and practical help for visitors who want more than a quick stop.</p>
+          <p class="lead-strong">My name is Cindrea, and I’m a proud Nauruan who has lived here my whole life.</p>
+          <p class="lead-strong nauruan">Iouge eouge Naoero.</p>
+          <p>If you are considering Nauru, you are already choosing something uncommon.</p>
+          <p>Some visitors come as part of a journey to see every country in the world. Others come because they want to experience a part of the Pacific few people ever reach. I work with both kinds of travelers, and I help make your time here meaningful.</p>
+          <p>Nauru is not a typical tourism destination. Travel here requires planning, flexibility, and local coordination. Information can be limited, and logistics can change. My role is to introduce you to my island and help make your visit both efficient and enjoyable.</p>
+          <p>I provide local knowledge, coordination, and access.</p>
+
+          <div class="hero-buttons">
+            <a class="button" href="https://wa.me/6745541739?text=Hello%20Cindrea,%20I%20am%20interested%20in%20visiting%20Nauru">Message on WhatsApp</a>
+            <a class="button" href="mailto:tourisanauru674@gmail.com?subject=Nauru%20visit%20inquiry">Email me</a>
+          </div>
+        </div>
 
         <div class="hero-panel">
           <h3>Why visitors choose Tourisa Guides Nauru</h3>
@@ -529,11 +553,6 @@
             <li>Guidance for country-counters and unusual Pacific extensions</li>
             <li>Simple, direct contact by WhatsApp and email</li>
           </ul>
-        </div>
-
-        <div class="hero-buttons">
-          <a class="button" href="https://wa.me/6745541739?text=Hello%20Cindrea,%20I%20am%20interested%20in%20visiting%20Nauru">Message on WhatsApp</a>
-          <a class="button" href="mailto:tourisanauru674@gmail.com?subject=Nauru%20visit%20inquiry">Email me</a>
         </div>
       </div>
     </div>
@@ -557,7 +576,7 @@
     </section>
 
     <section id="who">
-      <h2>Who I work with</h2>
+      <h2>The travelers I work with</h2>
       <p class="section-intro">Most of my guests fall into three groups:</p>
       <ul>
         <li>Travelers working toward visiting every country in the world and who want their time here to be complete and well structured</li>
@@ -569,7 +588,7 @@
     </section>
 
     <section id="why">
-      <h2>Why travel with me</h2>
+      <h2>Why travel with me?</h2>
       <p class="section-intro">Tourism in Nauru is still developing, so reliable local support matters.</p>
       <ul>
         <li>Lifelong local knowledge and relationships</li>
@@ -589,14 +608,14 @@
       <p>Although we Nauruans are extremely welcoming of visitors, our tourist visa system might give a different impression.</p>
       <p>I can help you prepare the documents needed for a tourist visa, including proof of guiding, accommodation, and itinerary details. When visitors follow my guidance, <strong>my visa success rate has been 100%</strong>.</p>
       <p>I help simplify a process that can otherwise feel difficult from abroad.</p>
-<div class="image-row-two">
-  <div class="image-card horizontal">
-    <img src="Nauru - 8.jpeg" alt="Port and coastline in Nauru" loading="lazy" decoding="async">
-  </div>
-  <div class="image-card horizontal">
-    <img src="Nauru - 9.jpeg" alt="Republic of Nauru Airport building" loading="lazy" decoding="async">
-  </div>
-</div>
+      <div class="image-row-two">
+        <div class="image-card horizontal">
+          <img src="Nauru - 8.jpeg" alt="Port and coastline in Nauru" loading="lazy" decoding="async">
+        </div>
+        <div class="image-card horizontal">
+          <img src="Nauru - 9.jpeg" alt="Republic of Nauru Airport building" loading="lazy" decoding="async">
+        </div>
+      </div>
     </section>
 
     <section id="experiences">
@@ -725,10 +744,10 @@
     </section>
   </main>
 
-<footer>
-  <div>Tourisa Guides Nauru</div>
-  <div class="footer-credit">Website and photographs by <a href="https://www.aspeninstitute.org/people/aaron-mertz/" target="_blank">Aaron F. Mertz</a>, who visited Nauru with Cindrea in 2026</div>
-</footer>
+  <footer>
+    <div>Tourisa Guides Nauru</div>
+    <div class="footer-credit">Website and photographs by <a href="https://www.aspeninstitute.org/people/aaron-mertz/" target="_blank">Aaron F. Mertz</a>, who visited Nauru with Cindrea in 2026</div>
+  </footer>
 
   <script>
     (function () {
