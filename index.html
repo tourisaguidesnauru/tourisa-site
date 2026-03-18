@@ -1,489 +1,611 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourisa Guides Nauru</title>
+  <meta name="description" content="Local guiding, visa support, and meaningful travel experiences in Nauru with Tourisa Guides Nauru.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f7f8;
+      --bg-soft: #eef6f4;
+      --card: #ffffff;
+      --text: #1d2935;
+      --muted: #5b6b79;
+      --accent: #0f766e;
+      --accent-dark: #0b5c56;
+      --border: #d9e3ea;
+      --shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+      --max-width: 1100px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --nav-height: 72px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: linear-gradient(180deg, #f7fbfa 0%, #f5f7f8 100%);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      min-height: var(--nav-height);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(217, 227, 234, 0.9);
+    }
+
+    .nav-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.93rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 72px 20px 42px;
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 30%),
+        linear-gradient(180deg, rgba(15, 118, 110, 0.06) 0%, rgba(255,255,255,0) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.1);
+      color: var(--accent-dark);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      color: #13202b;
+      line-height: 1.14;
+    }
+
+    h1 {
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(2.5rem, 5.5vw, 4.4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      max-width: 840px;
+    }
+
+    h2 {
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.14rem;
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 18px;
+    }
+
+    .lead-strong {
+      font-size: 1.03rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .nauruan {
+      font-family: "Newsreader", Georgia, serif;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      color: var(--accent-dark);
+      font-weight: 700;
+    }
+
+    .hero p {
+      margin: 0 0 14px;
+      max-width: 760px;
+    }
+
+    .hero-panel {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+    }
+
+    .hero-panel h3 {
+      margin-bottom: 12px;
+    }
+
+    .hero-panel ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .hero-panel li {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid var(--accent);
+      transition: 0.18s ease;
+      min-height: 46px;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(15, 118, 110, 0.18);
+    }
+
+    .button-primary:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      background: #ffffff;
+      color: var(--accent);
+    }
+
+    .button-secondary:hover {
+      background: #f0fdfb;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 30px 20px 46px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow);
+      scroll-margin-top: 92px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 14px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .experience-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdfd 100%);
+    }
+
+    .experience-card p {
+      color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 8px;
+    }
+
+    .contact-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      background: #fcfdfd;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin-right: 14px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px 38px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    body.phone .nav-wrap {
+      align-items: flex-start;
+    }
+
+    body.phone .nav-links {
+      gap: 10px 12px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        max-width: 640px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        position: static;
+      }
+
+      .nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 16px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding: 40px 16px 28px;
+      }
+
+      main {
+        padding: 18px 16px 34px;
+      }
+
+      section {
+        padding: 22px;
+      }
+
+      .experience-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Tourisa Guides Nauru&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta</p>
-<p class="p1"><span class="Apple-converted-space">    </span>name="description"</p>
-<p class="p1"><span class="Apple-converted-space">    </span>content="Local guiding, visa support, and meaningful travel experiences in Nauru with Tourisa Guides Nauru."</p>
-<p class="p1"><span class="Apple-converted-space">  </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg: #f7f9fb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--card: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--text: #1f2933;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted: #52606d;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent: #0f766e;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent-dark: #0b5c56;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--border: #d9e2ec;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--max-width: 980px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--nav-height: 72px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>html {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>scroll-behavior: smooth;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, Helvetica, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.65;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.site-header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: sticky;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>z-index: 1000;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.96);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(8px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-wrap {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: var(--nav-height);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.05rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #eaf7f5 0%, #ffffff 100%);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-inner {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 56px 20px 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.12;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 0 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 0 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 760px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.12rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-buttons {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: 0.15s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.button-primary {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.button-primary:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.button-secondary {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.button-secondary:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f0fdfb;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 28px 20px 44px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--card);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>scroll-margin-top: 96px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.55rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>h3 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.12rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 0 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>ul {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 0 14px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>li {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.muted {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.callout {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f0fdfb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-left: 4px solid var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.experience-grid {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1fr 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.experience-card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fcfdfd;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.contact-list p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 20px 36px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 760px) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero h1 {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>.experience-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>.nav-wrap {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>align-items: flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header class="site-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="brand" href="#top"&gt;Tourisa Guides Nauru&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav class="nav-links" aria-label="Primary"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#about"&gt;About Nauru&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#who"&gt;Who I work with&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#why"&gt;Why travel with me&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#visa"&gt;Visa support&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#experiences"&gt;Experiences&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#why-nauru"&gt;Why include Nauru&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#logistics"&gt;Logistics&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#company"&gt;My company&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero" id="top"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-inner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Tourisa Guides Nauru&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="hero-subtitle"&gt;Local guiding, visa support, and meaningful travel on one of the world’s least-visited countries.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;My name is Cindrea, and I’m a proud Nauruan who has lived here my whole life.&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Iouge eouge Naoero.&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>If you are considering Nauru, you are already choosing something uncommon.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Some visitors come as part of a journey to see every country in the world. Others come because they want to experience a part of the Pacific few people ever reach. I work with both kinds of travelers, and I help make your time here meaningful.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Nauru is not a typical tourism destination. Travel here requires planning, flexibility, and local coordination. Information can be limited, and logistics can change. My role is to introduce you to my wonderful island and make your visit not only efficient but also fun.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>I provide local knowledge, coordination, and access.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hero-buttons"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="button button-primary" href="https://wa.me/6745541739?text=Hello%20Cindrea,%20I%20am%20interested%20in%20visiting%20Nauru"&gt;Message on WhatsApp&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="button button-secondary" href="mailto:tourisanauru674@gmail.com"&gt;Email me&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="about"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;About Nauru&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Until the mid-1990s, Nauru was one of the richest countries in the world because of phosphate mining. Over time, that period of wealth declined as the industry changed. Today, our economy relies on government services, regional partnerships, fisheries, and small local industries.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>What you will experience here is not curated mass tourism. Nauru is a real place with a complex history, a distinctive landscape, and a strong sense of identity.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Many visitors know Nauru only as a name on a map or as one of the world’s least-visited countries. Once they arrive, they discover a country with far more character, history, and local life than they expected.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="who"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Who I work with&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Most of my guests fall into three groups:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Travelers working toward visiting every country in the world and who want their time here to be complete and well structured&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Travelers who delight in visiting places few others have seen&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Travelers looking for an unusual Pacific destination beyond the better-known islands&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>In all cases, my goal is the same: to help you understand Nauru rather than simply pass through it.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>I appreciate travelers who make the effort to reach places like Nauru. Journeys of that kind often create informal ambassadors for parts of the world that are rarely seen or understood internationally.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="why"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Why travel with me&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Tourism in Nauru is still developing, so reliable local support matters.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;I offer:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Lifelong local knowledge and relationships&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Clear communication in English&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Planning around limited flights and short stays&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Coordination of drivers, timing, and access across the island&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Optional translation support in Chinese&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;A trusted local network who can assist you during your stay even when I am occupied with other visitors&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Visa support&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>I am also proud to be building a business as a woman in a very small and still-emerging tourism sector. Work of this kind takes confidence, adaptability, and strong relationships across many different local communities and visitor cultures.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Most visitors stay 1, 2, or 3 nights because flights are infrequent. No matter how much time you have, I will help you make the most of it.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="visa"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Visa support&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Although we Nauruans are extremely welcoming of visitors, our tourist visa system might give a different impression.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>I can help you prepare the documents needed for a tourist visa, including proof of guiding, accommodation, and itinerary details. When visitors follow my guidance, my visa success rate has been &lt;strong&gt;100%&lt;/strong&gt;.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Good preparation makes a major difference, and I help simplify a process that can otherwise feel difficult from abroad.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="experiences"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;What can you do in Nauru?&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="muted"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Experiences can be adapted to your schedule, weather, tides, and interests.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="experience-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="experience-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;1. Noddy bird tradition and local cooking&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;A hands-on introduction to one of Nauru’s traditional food practices&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Observe how noddy birds are caught using local techniques&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Learn the preparation and cleaning process step by step&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Cook together using traditional methods and local ingredients&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Share a meal featuring one of Nauru’s distinctive local foods&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Food offers a direct way to understand daily life on the island&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="experience-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;2. Snorkeling and beach barbecue&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;A relaxed coastal experience combining ocean time and fresh local food&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Snorkel in calm waters, depending on sea conditions&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;See coastal marine life and enjoy time by the water&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Have a beach barbecue with local fish, coconut, chicken, and other island food&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Spend time along quieter parts of the coast&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;A good option for a lighter, restorative half-day&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="experience-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;3. Interior exploration and historical sites&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;A guided introduction to Nauru’s interior, history, and landscape&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Walk sections of the Ganakoro trail&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Visit Japanese bunkers from World War II&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;See rock formations, caves, and the Tribal Cave and prayer altar&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Stop at viewpoints for wide views across the island&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;This experience provides essential context for understanding Nauru beyond its coastline&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="experience-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;4. Reef gathering and ocean-to-table cooking&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;A fully hands-on coastal gathering experience&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Collect periwinkles and other seafood along the reef&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Learn how sea urchins are cleaned and prepared&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Join an octopus hunt when conditions allow&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Cook the day’s fresh ingredients on the beach or at home&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;For travelers who want a direct experience of local food practices and coastal life, this option is often a highlight&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="why-nauru"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Why include Nauru on your trip?&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Nauru will never have the tourism market of Fiji or Samoa, and I do not present it that way.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>The appeal of Nauru is different. Nauru offers rarity, authenticity, and the chance to experience a country that very few travelers ever reach in a meaningful way.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Our national airline connects Nauru with Brisbane, Fiji, and Tarawa (Kiribati) several times each week. Reaching the island takes effort, but many visitors find that effort worthwhile precisely because the experience is so different from more conventional destinations.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="logistics"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Logistics&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Nauru is a small island (about 20 km around), and most travel is by car. I arrange transport so you can move efficiently between sites.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Flights are limited and schedules can change. I plan your activities around your arrival and departure so your time is used well.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Compared to many Pacific islands, Nauru has strong mobile and data coverage (often LTE). You can stay connected with an eSIM or a local Digicel SIM.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;I can recommend and coordinate suitable accommodation based on your preferences and availability.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Medical facilities on the island are basic, and outbound travel options are limited. Travel insurance is recommended for all visitors.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="callout"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Tip: once photos are ready, best placements are a hero image at the top and one small image above the experiences section.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="company"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;My company&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>I named my company, &lt;strong&gt;Tourisa Guides Nauru&lt;/strong&gt;, after my baby daughter. Her name represents the new life I hope to build for her and for tourism in Nauru.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>My goal is to welcome visitors in a way that benefits both guests and local people, while helping more travelers discover what our island has to offer.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Contact&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact-list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Find me on:&lt;/strong&gt; Facebook, Instagram, and TikTok&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;WhatsApp:&lt;/strong&gt; &lt;a href="https://wa.me/6745541739?text=Hello%20Cindrea,%20I%20am%20interested%20in%20visiting%20Nauru"&gt;+674-554-1739&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href="mailto:tourisanauru674@gmail.com"&gt;tourisanauru674@gmail.com&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>Tourisa Guides Nauru</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top">Tourisa Guides Nauru</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#who">Guests</a>
+        <a href="#why">Guide</a>
+        <a href="#visa">Visa</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#logistics">Logistics</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Local guide • Nauru</div>
+        <h1>Meaningful travel in one of the world’s least-visited countries</h1>
+        <p class="hero-subtitle">Local guiding, visa support, and practical help for visitors who want more than a quick stop.</p>
+        <p class="lead-strong">My name is Cindrea, and I’m a proud Nauruan who has lived here my whole life.</p>
+        <p class="lead-strong nauruan">Iouge eouge Naoero.</p>
+        <p>If you are considering Nauru, you are already choosing something uncommon.</p>
+        <p>Some visitors come as part of a journey to see every country in the world. Others come because they want to experience a part of the Pacific few people ever reach. I work with both kinds of travelers, and I help make your time here meaningful.</p>
+        <p>Nauru is not a typical tourism destination. Travel here requires planning, flexibility, and local coordination. Information can be limited, and logistics can change. My role is to introduce you to my island and help make your visit both efficient and enjoyable.</p>
+        <p>I provide local knowledge, coordination, and access.</p>
+
+        <div class="hero-buttons">
+          <a class="button button-primary" href="https://wa.me/6745541739?text=Hello%20Cindrea,%20I%20am%20interested%20in%20visiting%20Nauru">Message on WhatsApp</a>
+          <a class="button button-secondary" href="mailto:tourisanauru674@gmail.com">Email me</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h3>Why visitors choose Tourisa Guides Nauru</h3>
+        <ul>
+          <li>Local guide with lifelong knowledge of the island</li>
+          <li>Help with tourist visa preparation</li>
+          <li>Support for short stays and limited flight schedules</li>
+          <li>Guidance for country-counters and unusual Pacific extensions</li>
+          <li>Simple, direct contact by WhatsApp and email</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <main>
+    <section id="about">
+      <h2>About Nauru</h2>
+      <p>Until the mid-1990s, Nauru was one of the richest countries in the world because of phosphate mining. Over time, that period of wealth declined as the industry changed. Today, our economy relies on government services, regional partnerships, fisheries, and small local industries.</p>
+      <p>What you will experience here is not curated mass tourism. Nauru is a real place with a complex history, a distinctive landscape, and a strong sense of identity.</p>
+      <p>Many visitors know Nauru only as a name on a map or as one of the world’s least-visited countries. Once they arrive, they discover a country with far more character, history, and local life than they expected.</p>
+    </section>
+
+    <section id="who">
+      <h2>Who I work with</h2>
+      <p class="section-intro">Most of my guests fall into three groups:</p>
+      <ul>
+        <li>Travelers working toward visiting every country in the world and who want their time here to be complete and well structured</li>
+        <li>Travelers who delight in visiting places few others have seen</li>
+        <li>Travelers looking for an unusual Pacific destination beyond the better-known islands</li>
+      </ul>
+      <p>In all cases, my goal is the same: to help you understand Nauru rather than simply pass through it.</p>
+      <p>I appreciate travelers who make the effort to reach places like Nauru. Journeys of that kind often create informal ambassadors for parts of the world that are rarely seen or understood internationally.</p>
+    </section>
+
+    <section id="why">
+      <h2>Why travel with me</h2>
+      <p class="section-intro">Tourism in Nauru is still developing, so reliable local support matters.</p>
+      <ul>
+        <li>Lifelong local knowledge and relationships</li>
+        <li>Clear communication in English</li>
+        <li>Planning around limited flights and short stays</li>
+        <li>Coordination of drivers, timing, and access across the island</li>
+        <li>Optional translation support in Chinese</li>
+        <li>A trusted local network who can assist you during your stay even when I am occupied with other visitors</li>
+        <li>Visa support</li>
+      </ul>
+      <p>I am also proud to be building a business as a woman in a very small and still-emerging tourism sector. Work of that kind takes confidence, adaptability, and strong relationships across many different local communities and visitor cultures.</p>
+      <p>Most visitors stay 1, 2, or 3 nights because flights are infrequent. No matter how much time you have, I will help you make the most of it.</p>
+    </section>
+
+    <section id="visa">
+      <h2>Visa support</h2>
+      <p>Although we Nauruans are extremely welcoming of visitors, our tourist visa system might give a different impression.</p>
+      <p>I can help you prepare the documents needed for a tourist visa, including proof of guiding, accommodation, and itinerary details. When visitors follow my guidance, my visa success rate has been <strong>100%</strong>.</p>
+      <p>Good preparation makes a major difference, and I help simplify a process that can otherwise feel difficult from abroad.</p>
+    </section>
+
+    <section id="experiences">
+      <h2>What can you do in Nauru?</h2>
+      <p class="muted">Experiences can be adapted to your schedule, weather, tides, and interests.</p>
+
+      <div class="experience-grid">
+        <article class="experience-card">
+          <h3>1. Noddy bird tradition and local cooking</h3>
+          <p>A hands-on introduction to one of Nauru’s traditional food practices.</p>
+          <ul>
+            <li>Observe how noddy birds are caught using local techniques</li>
+            <li>Learn the preparation and cleaning process step by step</li>
+            <li>Cook together using traditional methods and local ingredients</li>
+            <li>Share a meal featuring one of Nauru’s distinctive local foods</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <h3>2. Snorkeling and beach barbecue</h3>
+          <p>A relaxed coastal experience combining ocean time and fresh local food.</p>
+          <ul>
+            <li>Snorkel in calm waters, depending on sea conditions</li>
+            <li>See coastal marine life and enjoy time by the water</li>
+            <li>Have a beach barbecue with local fish, coconut, chicken, and other island food</li>
+            <li>Spend time along quieter parts of the coast</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <h3>3. Interior exploration and historical sites</h3>
+          <p>A guided introduction to Nauru’s interior, history, and landscape.</p>
+          <ul>
+            <li>Walk sections of the Ganakoro trail</li>
+            <li>Visit Japanese bunkers from World War II</li>
+            <li>See rock formations, caves, and the Tribal Cave and prayer altar</li>
+            <li>Stop at viewpoints for wide views across the island</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <h3>4. Reef gathering and ocean-to-table cooking</h3>
+          <p>A fully hands-on coastal gathering experience.</p>
+          <ul>
+            <li>Collect periwinkles and other seafood along the reef</li>
+            <li>Learn how sea urchins are cleaned and prepared</li>
+            <li>Join an octopus hunt when conditions allow</li>
+            <li>Cook the day’s fresh ingredients on the beach or at home</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="why-nauru">
+      <h2>Why include Nauru on your trip?</h2>
+      <p>Nauru will never have the tourism market of Fiji or Samoa, and I do not present it that way.</p>
+      <p>The appeal of Nauru is different. Nauru offers rarity, authenticity, and the chance to experience a country that very few travelers ever reach in a meaningful way.</p>
+      <p>Our national airline connects Nauru with Brisbane, Fiji, and Tarawa (Kiribati) several times each week. Reaching the island takes effort, but many visitors find that effort worthwhile precisely because the experience is so different from more conventional destinations.</p>
+    </section>
+
+    <section id="logistics">
+      <h2>Logistics</h2>
+      <ul>
+        <li>Nauru is a small island (about 20 km around), and most travel is by car. I arrange transport so you can move efficiently between sites.</li>
+        <li>Flights are limited and schedules can change. I plan your activities around your arrival and departure so your time is used well.</li>
+        <li>Compared to many Pacific islands, Nauru has strong mobile and data coverage (often LTE). You can stay connected with an eSIM or a local Digicel SIM.</li>
+        <li>I can recommend and coordinate suitable accommodation based on your preferences and availability.</li>
+        <li>Medical facilities on the island are basic, and outbound travel options are limited. Travel insurance is recommended for all visitors.</li>
+      </ul>
+    </section>
+
+    <section id="company">
+      <h2>My company</h2>
+      <p>I named my company, <strong>Tourisa Guides Nauru</strong>, after my baby daughter. Her name represents the new life I hope to build for her and for tourism in Nauru.</p>
+      <p>My goal is to welcome visitors in a way that benefits both guests and local people, while helping more travelers discover what our island has to offer.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Direct contact</h3>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/6745541739?text=Hello%20Cindrea,%20I%20am%20interested%20in%20visiting%20Nauru">+674-554-1739</a></p>
+          <p><strong>Email:</strong> <a href="mailto:tourisanauru674@gmail.com">tourisanauru674@gmail.com</a></p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Social media</h3>
+          <div class="contact-links">
+            <a href="https://www.facebook.com/tourisaguidesnauru/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/nru_tourisaguides/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@tourisa_674_guides" target="_blank" rel="noopener">TikTok</a>
+          </div>
+          <p class="muted">Message me directly to start planning your visit.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Tourisa Guides Nauru
+  </footer>
+
+  <script>
+    (function () {
+      const width = window.innerWidth;
+      let deviceClass = "desktop";
+
+      if (width <= 760) {
+        deviceClass = "phone";
+      } else if (width <= 1024) {
+        deviceClass = "tablet";
+      }
+
+      document.body.classList.add(deviceClass);
+      document.body.setAttribute("data-device", deviceClass);
+    })();
+  </script>
 </body>
 </html>
